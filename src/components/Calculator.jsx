@@ -20,6 +20,14 @@ const Calculator = () => {
         setShouldReset(true);
     };
 
+    const handleDelete = () => {
+        if (display.length > 1) {
+            setDisplay(display.slice(0, -1));
+        } else {
+            setDisplay('0');
+        }
+    };
+
     const calculate = () => {
         try {
             // Use Function constructor instead of eval for a bit more safety, 
@@ -43,22 +51,24 @@ const Calculator = () => {
 
     const buttons = [
         { label: 'AC', action: clear, type: 'control' },
+        { label: 'DEL', action: handleDelete, type: 'control' },
+        { label: '%', action: () => handleOperator('%'), type: 'operator' },
         { label: '/', action: () => handleOperator('/'), type: 'operator' },
-        { label: '*', action: () => handleOperator('*'), type: 'operator' },
         { label: '7', action: () => handleNumber('7'), type: 'number' },
         { label: '8', action: () => handleNumber('8'), type: 'number' },
         { label: '9', action: () => handleNumber('9'), type: 'number' },
-        { label: '-', action: () => handleOperator('-'), type: 'operator' },
+        { label: '*', action: () => handleOperator('*'), type: 'operator' },
         { label: '4', action: () => handleNumber('4'), type: 'number' },
         { label: '5', action: () => handleNumber('5'), type: 'number' },
         { label: '6', action: () => handleNumber('6'), type: 'number' },
-        { label: '+', action: () => handleOperator('+'), type: 'operator' },
+        { label: '-', action: () => handleOperator('-'), type: 'operator' },
         { label: '1', action: () => handleNumber('1'), type: 'number' },
         { label: '2', action: () => handleNumber('2'), type: 'number' },
         { label: '3', action: () => handleNumber('3'), type: 'number' },
-        { label: '=', action: calculate, type: 'equals' },
-        { label: '0', action: () => handleNumber('0'), type: 'number', className: 'double' },
+        { label: '+', action: () => handleOperator('+'), type: 'operator' },
+        { label: '0', action: () => handleNumber('0'), type: 'number' },
         { label: '.', action: () => handleNumber('.'), type: 'number' },
+        { label: '=', action: calculate, type: 'equals', className: 'double' },
     ];
 
     return (
