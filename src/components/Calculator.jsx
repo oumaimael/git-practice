@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Calculator.css';
 
 const Calculator = () => {
-    const [display, setDisplay] = useState('5');
+    const [display, setDisplay] = useState('0');
     const [equation, setEquation] = useState('');
     const [shouldReset, setShouldReset] = useState(false);
 
