@@ -1,16 +1,46 @@
-# React + Vite
+# Funky Calc 🌈
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, minimalist, and funky React calculator built with Vite. Featuring a sleek glassmorphism design, vibrant neon gradients, and a unique personality.
 
-Currently, two official plugins are available:
+![Funky Calc Preview](/home/oumaima/.gemini/antigravity/brain/a71b3dc4-37fa-4c02-bc12-eb08647eb609/calculator_verification_1770126005285.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Basic Operations**: Addition, Subtraction, Multiplication, Division.
+- **Advanced Logic**: Modulo (%) support.
+- **Smart Delete**: Character-by-character deletion (DEL).
+- **Glassmorphism UI**: Semi-transparent, blurred background for a premium feel.
+- **Funky Shapes**: Asymmetrical button styling for a modern look.
+- **Responsive Animations**: Smooth hover and active states.
 
-## React Compiler
+## Tech Stack
+- **React**: Frontend framework.
+- **Vite**: Ultra-fast build tool and dev server.
+- **Vanilla CSS**: Custom-crafted funky styles.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+1. Clone the repository (if applicable) or navigate to the project folder.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running Locally
+To start the development server:
+```bash
+npm run dev
+```
+The app will be available at `http://localhost:5173` (or your configured port).
+
+## Project Structure
+- `src/components/Calculator.jsx`: Core logic and button mapping.
+- `src/components/Calculator.css`: Component-specific funky styles.
+- `src/index.css`: Global styles and design system.
+
+## License
+MIT
